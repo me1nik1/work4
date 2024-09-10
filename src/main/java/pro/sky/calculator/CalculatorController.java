@@ -24,14 +24,14 @@ public class CalculatorController {
     @GetMapping("/plus")
     public String plus(@RequestParam Integer num1, @RequestParam Integer num2) {
 
-        var result = calculatorService.plus(num1,num2);
+        var result = calculatorService.plus(num1, num2);
         return num1 + " + " + num2 + " = " + result;
     }
 
     @GetMapping("/minus")
     public String minus(@RequestParam Integer num1, @RequestParam Integer num2) {
 
-        var result = calculatorService.minus(num1,num2);
+        var result = calculatorService.minus(num1, num2);
         return num1 + "-" + num2 + " = " + result;
     }
 
@@ -40,13 +40,13 @@ public class CalculatorController {
         if (num2 == 0) {
             return "На ноль делить нельзя";
         }
-        var result = calculatorService.divide(num1,num2);
+        var result = calculatorService.divide(num1, num2);
         return num1 + " / " + num2 + " = " + result;
     }
 
     @GetMapping("/multiply")
     public String multiply(@RequestParam Integer num1, @RequestParam Integer num2) {
-        var result = calculatorService.multiply(num1,num2);
+        var result = calculatorService.multiply(num1, num2);
         return num1 + " * " + num2 + " = " + result;
     }
 }
